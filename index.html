@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Useful HTML tags</title>
+    <style>
+        h1{
+            font-size: 40px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-shadow:1px 2px 3px gray;
+            color:rgb(66, 66, 99);
+            
+        }
+        h2{
+            font-size: 30px;
+            color: rgb(63, 63, 109);
+            font-family: fantasy;
+        }
+        .contener{
+            margin-top:0;
+            background-color: rgb(68, 80, 90);
+            padding:50px;
+            width:80%;
+            color:white;
+            box-shadow:2px 3px 4px gray;
+            
+        }
+        textarea{
+            width:85%;
+            max-width:95%;
+            min-width:60%;
+            height: 150px;
+            color:rgb(214, 224, 236);
+            background-color: rgb(37, 36, 36);
+            box-shadow:1px 1px 10px rgb(224, 223, 233);
+            text-align:left;
+        }
+        button{
+            padding:7px;
+            font-weight: bold;
+            color:rgb(248, 251, 255);
+            background-color: rgb(37, 36, 36);
+           
+            box-shadow:2px 2px 1px gray;
+        }
+    </style>
+</head>
+<body >
+    <center>
+    <h1><u>Rare but Super Useful HTML tags</u></h1>
+
+    <br>
+    <br>
+    <h2>Details - tag</h2>
+    <div class="contener">
+
+        <div id="html1">
+            <details >
+                <summary>Title</summary>
+                <p>
+                    Professional HTML templates. Responsive, fully customizable with easy Drag-n-Drop Nicepage editor.<br>
+                Adjust colors, fonts, header and footer, layout and other design elements, as well as content and images. 
+                </p>
+            </details>
+        </div>
+
+        <br><br>
+        <textarea id="txt1">
+    <details >
+        <summary>Title</summary>
+        <p>
+            Professional HTML templates. Responsive, fully customizable with easy Drag-n-Drop Nicepage editor.<br>
+        Adjust colors, fonts, header and footer, layout and other design elements, as well as content and images. 
+        </p>
+    </details>
+        </textarea>
+        <br><br>
+        <button onclick="reloading();">Reload</button>
+    </div>
+    <br>
+
+
+    <br>
+    <h2>Datalist - tag</h2>
+    <div class="contener">
+        <div id="html2">
+            <input type="text" List="suggestions"size="50px" placeholder="Search ..">
+            <datalist id="suggestions">
+                <option>mercedes</option>
+                <option>Volkswagen</option>
+                <option>BMWK</option>
+                <option>Tesla</option>
+                <option>lamborghini</option >
+            </datalist>
+        </div>
+
+        <br><br>
+        <textarea id="txt2">
+<input type="text" List="suggestions"size="50px" placeholder="Search ..">
+    <datalist id="suggestions">
+        <option>mercedes</option>
+        <option>Volkswagen</option>
+        <option>BMWK</option>
+        <option>Tesla</option>
+        <option>lamborghini</option >
+    </datalist>
+        </textarea>
+        <br><br>
+        <button onclick="reloading();">Reload</button>
+    </div>
+    <br>
+
+
+    <br>
+    <h2>Inputs - tag</h2>
+    <div class="contener">
+        <div id="html3">
+            <h3>type : color</h3>
+            <input type="color" >
+
+        <h3>type : date</h3>
+            <input type="date"><br>
+            <input type="datetime-local"><br>
+            <input type="time">
+        
+        <h3>type : range</h3>
+            <input type="range"><br>
+            <input type="range" value="40" min="1" max="100">
+        </div>
+
+        <br><br>    
+        <textarea id="txt3">
+<h3>type : color</h3>
+    <input type="color" >
+
+<h3>type : date</h3>
+    <input type="date"><br>
+    <input type="datetime-local"><br>
+    <input type="time">
+        
+<h3>type : range</h3>
+    <input type="range"><br>
+    <input type="range" value="40" min="1" max="100">
+        </textarea>
+        <br><br>
+        <button onclick="reloading();">Reload</button>
+    </div>
+    <br>
+
+
+    <br>
+    <h2>Meter - tag</h2>
+    <div class="contener">
+        <div id="html4">
+            <meter></meter><br>
+            <meter max="100" min="1" value="50"></meter>
+        </div>
+        <br><br>    
+        <textarea id="txt4">
+<meter></meter><br>
+<meter max="100" min="1" value="50"></meter>
+        </textarea>
+        <br><br>
+        <button onclick="reloading();">Reload</button>
+    </div>
+    <br>
+    <br>
+    <h2>Progress - tag</h2>
+    <div class="contener">
+        <div id="html5">
+            <progress></progress><br>
+            <progress max="100" min="1" value="50"></progress>
+        </div>
+
+        <br><br>    
+        <textarea id="txt5">
+<progress></progress><br>
+<progress max="100" min="1" value="50"></progress>
+        </textarea>
+        <br><br>
+        <button onclick="reloading();">Reload</button>
+    </div>
+    
+    </center>
+
+    <script>
+        var h1 = document.getElementById("html1");
+        var h2 = document.getElementById("html2");
+        var h3 = document.getElementById("html3");
+        var h4 = document.getElementById("html4");
+        var h5 = document.getElementById("html5");
+
+
+
+        function reloading() {
+            
+        var t1 = document.getElementById("txt1") ;
+        var t2 = document.getElementById("txt2");
+        var t3 = document.getElementById("txt3");
+        var t4 = document.getElementById("txt4");
+        var t5 = document.getElementById("txt5");
+            h1.innerHTML=t1.value ;
+            h2.innerHTML=t2.value ;
+            h3.innerHTML=t3.value ;
+            h4.innerHTML=t4.value ;
+            h5.innerHTML=t5.value ;
+            
+        }
+    </script>
+</body>
+</html>
